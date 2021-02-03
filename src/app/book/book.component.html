@@ -1,0 +1,21 @@
+<tr>
+  <td class='sun'>日</td>
+  <td>月</td>
+  <td>火</td>
+  <td>水</td>
+  <td>木</td>
+  <td>金</td>
+  <td>土</td>
+</tr>
+<tr *ngFor="let i of [0,1,2,3,4,5]">
+  <td *ngFor="let n of [0,1,2,3,4,5,6]" (drop)="drop($event, i*7+n)" (dragover)="dragover($event)"
+      [class.work]="calendar[i*7+n] && calendar[i*7+n].shift == 'work' ? true: false"
+      [class.rest]="calendar[i*7+n] && calendar[i*7+n].shift == 'rest' ? true: false">
+      {{calendar[i*7+n] ? calendar[i*7+n].date: ''}}
+  </td>
+</tr>
+
+<div draggable="true" (dragstart)="drag($event, 'work')" class="work">出勤</div>
+<div draggable="true" (dragstart)="drag($event, 'rest')" class="rest">欠勤</div>
+
+<button (click)="submit()">送信</button>

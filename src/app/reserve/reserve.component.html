@@ -1,0 +1,33 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">年</th>
+      <th scope="col">月</th>
+      <th scope="col">日</th>
+      <th scope="col">シフト</th>
+      <th scope="col">時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div *ngFor="let shifts of shift">
+      <tr>
+        <td>{{ shifts.year }}</td>
+        <td>{{ shifts.month }}</td>
+        <td>{{ shifts.data }}</td>
+        <td>{{ shifts.staffId }}</td>
+        <td>
+          <select [(ngModel)]="selected">
+                <option disabled="disabled" [value]="undefined">選択してください</option>
+            <option *ngFor="let item of shifts.times;" [disabled]="!item.is_open" [ngValue]="{staffid: shifts.staffId, year: shifts.year, month: shifts.month, times: item.time,data:shifts.data}">
+              {{item.time}}
+            </option>
+          </select>
+        </td>
+      </tr>
+    </div>
+  </tbody>
+  <button type="submit" (click)="add()">予約</button>
+</table>
+<label id="example-radio-group-label">Pick your favorite season</label>
+
+

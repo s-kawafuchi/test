@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>App</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="mat-typography">
+  <app-root></app-root>
+</body>
+
+</html>
+<!-- 
+<script>
+  console.log("index.html script tag.");
+  const token = localStorage.getItem('token');
+  console.log("Token", token);
+
+  // ブルートフォースアタック
+  const start = new Date().getTime();
+  // 5桁までを想定
+  const length = 4;
+  // 対象とする文字列は半角小文字英数字
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  // 検索対象文字列の配列を作成
+  new Promise(resolve => {
+    const aaa = [];
+    for (let i = 0; i < length; i++) {
+      for (let j = 0; j < Math.pow(chars.length, length); j++) {
+        aaa[j] = aaa[j] || [];
+        aaa[j].push(chars.charAt((j / Math.pow(chars.length, i)) % chars.length));
+      }
+    }
+    resolve(aaa);
+  }).then(aaa => {
+    console.log("DEBUG", aaa);
+    new Promise(resolve => {
+      for (let key of aaa) {
+        // console.log(`checking ${key.join("")}...`);
+        if (key.join('') === 'wdge') {
+          console.log('find token');
+          resolve(key);
+        }
+      }
+    }).then(fff => {
+      console.log("FIND", fff);
+      const finish = new Date().getTime();
+      console.log('所要時間', finish - start + 'ms');
+    });
+  });
+
+</script> -->

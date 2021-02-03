@@ -1,0 +1,4 @@
+<ng-container *ngIf="target.invalid && (target.dirty || target.touched)">
+    <p *ngIf="target.hasError('email')">正しいEmail形式ではありません。</p>
+    <p *ngIf="target.hasError('required')">必須項目です。</p>
+</ng-container>

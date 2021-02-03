@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.10",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mysql": "^2.15.17",
+    "@types/node": "^14.14.20",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.7",
+    "promise-mysql": "^5.0.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

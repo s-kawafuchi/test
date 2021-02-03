@@ -1,0 +1,16 @@
+<p>スタッフシフト状況検索</p>
+
+<form [formGroup]="form">
+    <p>
+        スタッフID: <input type="text" formControlName="userid" />
+    </p>
+    <app-input-alert [target]="email"></app-input-alert>
+  </form>
+
+<button (click)="reserach()">検索</button>
+<div *ngIf="result.length!==0">
+  <div *ngFor="let res of result">
+    <p>{{res.username}}</p>
+    <p>{{res.id}}</p>
+  </div>
+</div>

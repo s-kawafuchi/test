@@ -1,0 +1,19 @@
+td{
+  border: 2px solid black;
+}
+td.sun{
+  background-color: red;
+}
+div{
+  border: 2px solid black;
+  cursor: move;
+  width: 50px;
+  height: 30px;
+}
+
+.work{
+  background-color: gray;
+}
+.rest{
+  background-color: red;
+}

@@ -1,0 +1,14 @@
+<p>ログイン画面</p>
+
+<form [formGroup]="form">
+    <p>
+        email: <input type="text" formControlName="email" />
+    </p>
+    <app-input-alert [target]="email"></app-input-alert>
+    <p>
+        password: <input type="text" formControlName="password" />
+    </p>
+    <app-input-alert [target]="passwd"></app-input-alert>
+</form>
+
+<button (click)="login()">LOGIN</button>
